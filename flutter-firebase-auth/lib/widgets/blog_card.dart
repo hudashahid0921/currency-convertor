@@ -1,14 +1,14 @@
-import 'package:firebase_auth_demo/screens/blog_detail_screen.dart';
+// File: lib/widgets/blog_card.dart
 import 'package:flutter/material.dart';
 import '../models/blog_post.dart';
 import '../screens/blog_detail_screen.dart';
 
 class BlogCard extends StatefulWidget {
   final BlogPost post;
-  const BlogCard({super.key, required this.post});
+  const BlogCard({Key? key, required this.post}) : super(key: key);
 
   @override
-  State<BlogCard> createState() => _BlogCardState();
+  _BlogCardState createState() => _BlogCardState();
 }
 
 class _BlogCardState extends State<BlogCard> {
@@ -20,50 +20,70 @@ class _BlogCardState extends State<BlogCard> {
       onEnter: (_) => setState(() => isHovered = true),
       onExit: (_) => setState(() => isHovered = false),
       child: GestureDetector(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => BlogDetailPage(post: widget.post),
-            ),
-          );
-        },
+        onTap: () => Navigator.push(
+          context,
+          MaterialPageRoute(builder: (_) => BlogDetailPage(post: widget.post)),
+        ),
         child: AnimatedContainer(
           duration: const Duration(milliseconds: 200),
           decoration: BoxDecoration(
-            color: Colors.black,
+            color: Colors.grey[900],
             borderRadius: BorderRadius.circular(12),
-            boxShadow: [
-              BoxShadow(color: Colors.white10, blurRadius: 5),
-            ],
             border: Border.all(
               color: isHovered ? Colors.purple : Colors.transparent,
-              width: 1,
+              width: 2,
             ),
+            boxShadow: [
+              BoxShadow(
+                color: isHovered ? Colors.purple.withOpacity(0.3) : Colors.black54,
+                blurRadius: isHovered ? 8 : 4,
+                offset: const Offset(0, 4),
+              ),
+            ],
           ),
-          padding: const EdgeInsets.all(12),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.network(widget.post.imageUrl, height: 120, width: double.infinity, fit: BoxFit.cover),
-              const SizedBox(height: 10),
-              Text(
-                widget.post.title,
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: isHovered ? Colors.purple : Colors.white,
+              ClipRRect(
+                borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
+                child: Image.network(
+                  widget.post.imageUrl,
+                  height: 150,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
                 ),
               ),
-              const SizedBox(height: 8),
-              Expanded(
-                child: Text(
-                  widget.post.summary,
-                  style: TextStyle(
-                    color: isHovered ? Colors.purple : Colors.white,
-                  ),
-                  maxLines: 3,
-                  overflow: TextOverflow.ellipsis,
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      widget.post.title,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: isHovered ? Colors.purple : Colors.white,
+                      ),
+                    ),
+                     Text(
+                      widget.post.summary,
+                      style: TextStyle(
+                        fontSize: 19,
+                        fontWeight: FontWeight.bold,
+                        color: isHovered ? Colors.purple : Colors.white,
+                      ),
+                    ),
+                    const SizedBox(height: 4),
+                    Text(
+                      widget.post.content,
+                      style: TextStyle(fontSize: 18, 
+                      color: isHovered ? Colors.purple : Colors.white,
+                      ),
+                      maxLines: 6,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
                 ),
               ),
             ],
