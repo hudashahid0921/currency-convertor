@@ -239,6 +239,7 @@ class _RelatedBlogTileState extends State<_RelatedBlogTile> {
                         fontSize: 13,
                         color: _isHovering
                             ? Colors.purpleAccent
+                              // ? Colors.purpleAccent
                             : const Color.fromARGB(255, 50, 50, 50),
                       ),
                       child: Text(
