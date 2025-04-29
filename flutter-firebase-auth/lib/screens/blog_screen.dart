@@ -65,7 +65,6 @@ Finally, in 1992, the Maastricht Treaty formally established the blueprint for a
 Key milestones:
 
 1999: The Euro was introduced as a digital accounting currency for electronic payments and banking.
-
 2002: Euro banknotes and coins were launched across 12 European countries, replacing their national currencies.
 
 For the first time in history, sovereign nations voluntarily gave up their individual currencies in favor of a shared future.
@@ -74,13 +73,10 @@ The Euro thus became a unique experiment — never before had so many independen
 Vision Behind the Euro
 The creators of the Euro envisioned:
 
-Economic Stability: Strengthen Europe's economy by eliminating currency fluctuations.
-
-Deeper Political Bonds: Build trust and cooperation among member nations.
-
-Global Influence: Position Europe as a major player against giants like the United States and China.
-
-Convenience: Simplify cross-border trade, investment, and travel.
+1) Economic Stability: Strengthen Europe's economy by eliminating currency fluctuations.
+2) Deeper Political Bonds: Build trust and cooperation among member nations.
+3) Global Influence: Position Europe as a major player against giants like the United States and China.
+4) Convenience: Simplify cross-border trade, investment, and travel.
 
 The Euro was meant to make Europe not just a collection of countries, but a true single market with seamless movement of goods, services, capital, and people.
 
@@ -90,26 +86,20 @@ Together, they form a single monetary bloc governed by the European Central Bank
 
 The ECB controls monetary policy for the entire Eurozone, ensuring:
 
-Inflation remains low and stable
-
-Financial systems remain strong
-
-Economic growth is sustainable
+1 ) Inflation remains low and stable
+2) Financial systems remain strong
+3) Economic growth is sustainable
 
 Countries like Germany, France, Italy, and Spain are major players, but smaller nations like Estonia and Slovenia also contribute to the richness of the Eurozone.
 
 Advantages of the Euro
 The Euro has unlocked numerous benefits:
 
-Trade Boom: Cross-border business became faster, cheaper, and more predictable.
-
-Travel Made Easy: No more changing currencies when traveling across most of Europe.
-
-Price Transparency: Consumers can compare prices directly across countries.
-
-Global Stability: The Euro provides a balance to the dominance of the U.S. dollar.
-
-Political Integration: The currency acts as a daily reminder of a shared European identity.
+1) Trade Boom: Cross-border business became faster, cheaper, and more predictable.
+2) Travel Made Easy: No more changing currencies when traveling across most of Europe.
+3)Price Transparency: Consumers can compare prices directly across countries.
+4) Global Stability: The Euro provides a balance to the dominance of the U.S. dollar.
+5) Political Integration: The currency acts as a daily reminder of a shared European identity.
 
 Struggles and Criticism
 Despite its successes, the Euro has faced serious hurdles:
