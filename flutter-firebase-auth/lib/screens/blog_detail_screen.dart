@@ -2,57 +2,6 @@ import 'package:flutter/material.dart';
 import '../models/blog_post.dart';
 import '../screens/blog_screen.dart';
 
-class CustomNavbar extends StatelessWidget implements PreferredSizeWidget {
-  @override
-  Size get preferredSize => Size.fromHeight(kToolbarHeight);
-  @override
-  Widget build(BuildContext context) {
-    return AppBar(
-      backgroundColor: Colors.black,
-      title: Row(
-        children: [
-          Text(
-            'MyApp',
-            style: TextStyle(
-              color: Colors.white,
-              fontWeight: FontWeight.bold,
-              fontSize: 22,
-            ),
-          ),
-          Spacer(),
-          TextButton(
-            onPressed: () {},
-            child: Text(
-              'Home',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-          TextButton(
-            onPressed: () {},
-            child: Text(
-              'About',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-          TextButton(
-            onPressed: () {},
-            child: Text(
-              'Contact',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-          TextButton(
-            onPressed: () {},
-            child: Text(
-              'Blog',
-              style: TextStyle(color: Colors.white),
-            ),
-          ),
-        ],
-      ),
-    );
-  }
-}
 class BlogDetailPage extends StatelessWidget {
   final BlogPost post;
   const BlogDetailPage({Key? key, required this.post}) : super(key: key);
@@ -105,14 +54,7 @@ class BlogDetailPage extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 12),
-                    Text(
-                      post.content,
-                      style: const TextStyle(
-                        fontSize: 16,
-                        color: Colors.white70,
-                        height: 1.5,
-                      ),
-                    ),
+                    ..._buildStyledContent(post.content),
                   ],
                 ),
               ),
@@ -158,6 +100,42 @@ class BlogDetailPage extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  List<Widget> _buildStyledContent(String content) {
+    final lines = content.split('\n');
+
+    return lines.map((line) {
+      final isHeading = line.trim().isNotEmpty &&
+          line.trim().length < 60 &&
+          RegExp(r'^[A-Z]').hasMatch(line.trim());
+
+      if (isHeading) {
+        return Padding(
+          padding: const EdgeInsets.only(top: 20, bottom: 8),
+          child: Text(
+            line.trim(),
+            style: const TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+              color: Colors.white,
+            ),
+          ),
+        );
+      }
+
+      return Padding(
+        padding: const EdgeInsets.only(bottom: 12),
+        child: Text(
+          line.trim(),
+          style: const TextStyle(
+            fontSize: 16,
+            color: Colors.white70,
+            height: 1.5,
+          ),
+        ),
+      );
+    }).toList();
   }
 }
 
@@ -239,7 +217,6 @@ class _RelatedBlogTileState extends State<_RelatedBlogTile> {
                         fontSize: 13,
                         color: _isHovering
                             ? Colors.purpleAccent
-                              // ? Colors.purpleAccent
                             : const Color.fromARGB(255, 50, 50, 50),
                       ),
                       child: Text(
