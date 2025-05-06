@@ -80,7 +80,7 @@ class _BlogCardState extends State<BlogCard> {
                       style: TextStyle(fontSize: 18, 
                       color: isHovered ? Colors.purple : Colors.white,
                       ),
-                      maxLines: 6,
+                      maxLines: 14,
                       overflow: TextOverflow.ellipsis,
                     ),
                   ],

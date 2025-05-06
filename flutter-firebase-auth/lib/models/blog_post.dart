@@ -1,4 +1,3 @@
-// File: lib/models/blog_post.dart
 class BlogPost {
   final String title;
   final String summary;

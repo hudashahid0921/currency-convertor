@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import '../models/blog_post.dart';
 import '../widgets/blog_card.dart';
 
-
 class BlogScreen extends StatelessWidget {
   const BlogScreen({super.key});
-  static const List<BlogPost> blogPosts =  [
+
+  static const List<BlogPost> blogPosts = [
     BlogPost(
       title: 'Dollar',
       summary: 'The Reign of the Worlds Most Traded Currency',
@@ -576,44 +576,37 @@ It remains a beacon of cultural identity and financial strength — a testament 
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            // H1 Title
-            const Center(
-              child: Text(
-                'Latest Blogs',
-                style: TextStyle(
-                  fontSize: 32,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white,
-                ),
+            const Text(
+              'Latest Blogs',
+              style: TextStyle(
+                fontSize: 32,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
               ),
             ),
             const SizedBox(height: 8),
-            // H2 Subtitle (2 lines, bold)
-            const Center(
-              child: Text(
-                'Explore the world of currencies with insightful articles.\nStay updated with trends and news.',
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white70,
-                ),
-                textAlign: TextAlign.center,
-                maxLines: 2,
-                overflow: TextOverflow.ellipsis,
+            const Text(
+              'Explore the world of currencies with insightful articles.\nStay updated with trends and news.',
+              style: TextStyle(
+                fontSize: 18,
+                fontWeight: FontWeight.bold,
+                color: Colors.white70,
               ),
+              textAlign: TextAlign.center,
+              maxLines: 2,
+              overflow: TextOverflow.ellipsis,
             ),
             const SizedBox(height: 20),
-            // Grid of blog cards
             Expanded(
               child: GridView.builder(
-                itemCount: BlogScreen.blogPosts.length,
+                itemCount: blogPosts.length,
                 gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 3,
                   crossAxisSpacing: 16,
                   mainAxisSpacing: 16,
                   childAspectRatio: 0.7,
                 ),
-                itemBuilder: (context, index) => BlogCard(post: BlogScreen.blogPosts[index]),
+                itemBuilder: (context, index) => BlogCard(post: blogPosts[index]),
               ),
             ),
           ],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/blog_post.dart';
-import '../screens/blog_screen.dart';
+import 'blog_screen.dart';
 
 class BlogDetailPage extends StatelessWidget {
   final BlogPost post;
@@ -20,84 +20,115 @@ class BlogDetailPage extends StatelessWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16),
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Main blog content
-            Expanded(
-              flex: 2,
-              child: SingleChildScrollView(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Center(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(12),
-                        child: Image.network(
-                          post.imageUrl,
-                          height: 300,
-                          width: double.infinity,
-                          fit: BoxFit.cover,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    Center(
-                      child: Text(
-                        post.title,
-                        textAlign: TextAlign.center,
-                        style: const TextStyle(
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 12),
-                    ..._buildStyledContent(post.content),
-                  ],
-                ),
-              ),
-            ),
-
-            const SizedBox(width: 24),
-
-            // Related Blogs Sidebar
-            Expanded(
-              flex: 1,
-              child: Container(
-                padding: const EdgeInsets.all(16),
-                decoration: BoxDecoration(
-                  color: const Color(0xFFD1C4E9),
-                  borderRadius: BorderRadius.circular(16),
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    const Text(
-                      'Related Blogs',
-                      style: TextStyle(
-                        fontSize: 22,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.black87,
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-                    Expanded(
-                      child: ListView.builder(
-                        itemCount: relatedBlogs.length,
-                        itemBuilder: (context, index) {
-                          final r = relatedBlogs[index];
-                          return _RelatedBlogTile(post: r);
-                        },
-                      ),
-                    ),
-                  ],
-                ),
-              ),
-            ),
-          ],
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            // Adjust layout based on screen width (responsive design)
+            if (constraints.maxWidth > 600) {
+              // Large screen (tablet or desktop)
+              return Row(
+                children: [
+                  Expanded(
+                    flex: 2,
+                    child: _buildMainBlogContent(),
+                  ),
+                  const SizedBox(width: 24),
+                  Expanded(
+                    flex: 1,
+                    child: _buildRelatedBlogs(),
+                  ),
+                ],
+              );
+            } else {
+              // Small screen (phone)
+              return Column(
+                children: [
+                  _buildMainBlogContent(),
+                  const SizedBox(height: 24),
+                  _buildRelatedBlogs(),
+                ],
+              );
+            }
+          },
         ),
+      ),
+    );
+  }
+
+  Widget _buildMainBlogContent() {
+    return SingleChildScrollView(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Center(
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(12),
+              child: Image.network(
+                post.imageUrl,
+                height: 300,
+                width: double.infinity,
+                fit: BoxFit.cover,
+                loadingBuilder: (context, child, loadingProgress) {
+                  if (loadingProgress == null) return child;
+                  return Center(
+                    child: CircularProgressIndicator(
+                      value: loadingProgress.expectedTotalBytes != null
+                          ? loadingProgress.cumulativeBytesLoaded /
+                              (loadingProgress.expectedTotalBytes ?? 1)
+                          : null,
+                    ),
+                  );
+                },
+              ),
+            ),
+          ),
+          const SizedBox(height: 16),
+          Center(
+            child: Text(
+              post.title,
+              textAlign: TextAlign.center,
+              style: const TextStyle(
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+              ),
+            ),
+          ),
+          const SizedBox(height: 12),
+          ..._buildStyledContent(post.content),
+        ],
+      ),
+    );
+  }
+
+  Widget _buildRelatedBlogs() {
+    return Container(
+      padding: const EdgeInsets.all(16),
+      decoration: BoxDecoration(
+        color: const Color(0xFFD1C4E9),
+        borderRadius: BorderRadius.circular(16),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          const Text(
+            'Related Blogs',
+            style: TextStyle(
+              fontSize: 22,
+              fontWeight: FontWeight.bold,
+              color: Colors.black87,
+            ),
+          ),
+          const SizedBox(height: 16),
+          Expanded(
+            child: ListView.builder(
+              itemCount: relatedBlogs.length,
+              itemBuilder: (context, index) {
+                final r = relatedBlogs[index];
+                return _RelatedBlogTile(post: r);
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
