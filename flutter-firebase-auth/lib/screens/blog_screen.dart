@@ -441,9 +441,8 @@ This marked a revolutionary moment — a currency not bearing images of emperors
 
 Key Highlights of the Early Dinar:
 
-Weight: ~4.25 grams of pure gold
-
-Circular shape with Arabic inscriptions
+1) Weight: ~4.25 grams of pure gold
+2) Circular shape with Arabic inscriptions
 
 No images of humans or animals (reflecting Islamic principles)
 
@@ -482,20 +481,17 @@ Every Dinar carried not just financial value but religious, political, and cultu
 The Global Footprint of the Dinar in Ancient Economies
 Due to its consistency and high gold content, the Dinar spread far and wide:
 
-Found buried in Viking hoards in Northern Europe.
-
-Used in Byzantine markets alongside other coins.
-
-Circulated through Chinese bazaars via the Silk Road.
+1) Found buried in Viking hoards in Northern Europe.
+2) Used in Byzantine markets alongside other coins.
+3) Circulated through Chinese bazaars via the Silk Road.
 
 The Dinar became a true global currency of its time — centuries before modern globalization.
 
 Challenges and Decline: Why the Classical Dinar Faded
 Despite its dominance, the Dinar’s influence declined due to:
 
-Political fragmentation of Islamic empires
-
-Mongol invasions disrupting trade routes
+1) Political fragmentation of Islamic empires
+2) Mongol invasions disrupting trade routes
 
 Rise of European colonial currencies (like the Spanish Real and British Pound)
 
@@ -508,25 +504,25 @@ Several countries proudly carry the Dinar legacy:
 
 
 Country	Currency Name	Interesting Fact
-Jordan	Jordanian Dinar (JOD)	Pegged strongly to the US dollar
-Kuwait	Kuwaiti Dinar (KWD)	World's most valuable currency
-Iraq	Iraqi Dinar (IQD)	Rebuilding post-conflict economy
-Bahrain	Bahraini Dinar (BHD)	Oil-backed strong currency
-Algeria	Algerian Dinar (DZD)	Introduced after independence
-Libya	Libyan Dinar (LYD)	Stabilized after political turmoil
+1) Jordan	Jordanian Dinar (JOD)	Pegged strongly to the US dollar
+2) Kuwait	Kuwaiti Dinar (KWD)	World's most valuable currency
+3) Iraq	Iraqi Dinar (IQD)	Rebuilding post-conflict economy
+4) Bahrain	Bahraini Dinar (BHD)	Oil-backed strong currency
+5) Algeria	Algerian Dinar (DZD)	Introduced after independence
+6) Libya	Libyan Dinar (LYD)	Stabilized after political turmoil
 Tunisia	Tunisian Dinar (TND)	Symbol of post-colonial freedom
 Each modern Dinar represents not just economic policy but national identity and pride.
 
 The Kuwaiti Dinar: World's Strongest Currency
 Among all Dinars, the Kuwaiti Dinar (KWD) stands at the top:
 
-1 KWD ≈ 3.25 USD (highest exchange rate globally)
+.) 1 KWD ≈ 3.25 USD (highest exchange rate globally)
 
-Supported by vast oil reserves
+.) Supported by vast oil reserves
 
-Strong, stable monetary policies
+.) Strong, stable monetary policies
 
-Limited inflation compared to other economies
+.) Limited inflation compared to other economies
 
 The Kuwaiti Dinar shows how strong governance can make ancient legacies thrive in the modern world.
 
@@ -535,31 +531,25 @@ Modern Dinar banknotes and coins are more than just money — they are cultural 
 
 Common design features:
 
-Historic monuments (like Petra, ancient cities)
-
-Calligraphy and Islamic art
-
-Portraits of national heroes and kings
-
-Native wildlife and flora
+1) Historic monuments (like Petra, ancient cities)
+2) Calligraphy and Islamic art
+3) Portraits of national heroes and kings
+4) Native wildlife and flora
 
 Through these designs, every Dinar connects citizens to their history and culture daily.
 
 The Economic Power of the Dinar in Today's World
-Today, the Dinar plays a crucial role in:
+.) Today, the Dinar plays a crucial role in:
 
-Oil trade agreements (Kuwait, Iraq, Bahrain)
-
-Tourism sectors (Tunisia, Jordan)
-
-Regional investments and banking
+1) Oil trade agreements (Kuwait, Iraq, Bahrain)
+2)Tourism sectors (Tunisia, Jordan)
+3) Regional investments and banking
 
 Despite facing challenges like regional conflicts and economic pressures, Dinar economies have shown remarkable resilience, adapting to global market changes while preserving their historical identity.
 
-Interesting Facts About the Dinar You Might Not Know
-The first Islamic Dinar had no images — only Quranic text.
-
-Kuwaiti Dinar is over 3x stronger than USD.
+.) Interesting Facts About the Dinar You Might Not Know
+.) The first Islamic Dinar had no images — only Quranic text.
+.) Kuwaiti Dinar is over 3x stronger than USD.
 
 Ancient Dinars are now sold at auctions for thousands of dollars.
 
