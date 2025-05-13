@@ -65,22 +65,28 @@ class _BlogCardState extends State<BlogCard> {
                         fontWeight: FontWeight.bold,
                         color: isHovered ? Colors.purple : Colors.white,
                       ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
-                     Text(
+                    const SizedBox(height: 4),
+                    Text(
                       widget.post.summary,
                       style: TextStyle(
                         fontSize: 19,
                         fontWeight: FontWeight.bold,
                         color: isHovered ? Colors.purple : Colors.white,
                       ),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
                     ),
                     const SizedBox(height: 4),
                     Text(
                       widget.post.content,
-                      style: TextStyle(fontSize: 18, 
-                      color: isHovered ? Colors.purple : Colors.white,
+                      style: TextStyle(
+                        fontSize: 18,
+                        color: isHovered ? Colors.purple : Colors.white,
                       ),
-                      maxLines: 14,
+                      maxLines: 6,
                       overflow: TextOverflow.ellipsis,
                     ),
                   ],
